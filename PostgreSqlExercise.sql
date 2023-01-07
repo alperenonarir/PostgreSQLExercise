@@ -1,10 +1,17 @@
 /*
 Odev1: SELECT, WHERE, AND, OR , NOT, !=, 'Mary'
 Odev2: BETWEEN, NOT BETWEEN, IN('Penelope', 'Nick', 'Ed'), NOT IN('Penelope', 'Nick', 'Ed')
+Odev3: LIKE , ILIKE, 
 */
 
-
-
+/*
+DERS3  * LIKE 'A%'  -- LIKE '%EN'  -- LIKE 'AL%N'
+       * name  NOT LIKE 'Z%'
+	   * ILIKE harf duyarlılığı yok
+       * wildcard %    0+ karakter gelebilir,
+       * wildcard _    1 KARAKTER GELEBİLİR LIKE '_LPEREN'
+	   * ~~ LIKE ~~* ILIKE YERİNE GEÇER.  !~~ not like !~~* not ilike
+*/
 
 /*  ÖDEV 1 SORULAR
 1-) film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -34,3 +41,21 @@ Odev2: BETWEEN, NOT BETWEEN, IN('Penelope', 'Nick', 'Ed'), NOT IN('Penelope', 'N
 -- 1-) SELECT * FROM film WHERE replacement_cost BETWEEN 12.99 AND 16.99 AND replacement_cost != 16.99 -- (DİPNOT)SELECT * FROM film WHERE length BETWEEN 100 AND 140; -- WHERE length >= 100 AND length <= 140 ifadesi ile aynı sonucu verir. replacement_cost <= 16.99 denmediği için çıkarılmıştır.
 -- 2-) SELECT first_name, last_name FROM actor WHERE first_name IN ('Penelope', 'Nick', 'Ed')
 -- 3-) SELECT * FROM film WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99)
+
+
+
+
+
+/*  ÖDEV 3 SORULAR
+1-) country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+2-) country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
+3-) film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren film isimlerini sıralayınız.
+4-) film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız.
+
+*/
+
+--   ÖDEV 3 CEVAPLAR
+-- 1-) SELECT * FROM country  WHERE country ~~ 'A%a'
+-- 2-) SELECT country FROM country WHERE country LIKE '%_____n'
+-- 3-) SELECT title FROM film WHERE title ILIKE '%t%t%t%t%t%'
+-- 4-) SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND  rental_rate = 2.99
