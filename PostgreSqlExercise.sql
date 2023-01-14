@@ -2,6 +2,8 @@
 Odev1: SELECT, WHERE, AND, OR , NOT, !=, 'Mary'
 Odev2: BETWEEN, NOT BETWEEN, IN('Penelope', 'Nick', 'Ed'), NOT IN('Penelope', 'Nick', 'Ed')
 Odev3: LIKE , ILIKE, 
+OdEV4: DISTINCT,  COUNT
+Odev5: 
 */
 
 /*
@@ -74,5 +76,5 @@ DERS3  * LIKE 'A%'  -- LIKE '%EN'  -- LIKE 'AL%N'
 2-) SELECT  COUNT (DISTINCT  replacement_cost)  FROM film
 3-) SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G'
 4-) SELECT COUNT(*) FROM country WHERE country LIKE '_____'
-5-) SELECT * FROM city WHERE city LIKE '%R' OR city LIKE '%r'
+5-) SELECT COUNT(*) FROM city WHERE city ILIKE '%R'V
 */
