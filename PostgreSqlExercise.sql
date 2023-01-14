@@ -59,3 +59,20 @@ DERS3  * LIKE 'A%'  -- LIKE '%EN'  -- LIKE 'AL%N'
 -- 2-) SELECT country FROM country WHERE country LIKE '%_____n'
 -- 3-) SELECT title FROM film WHERE title ILIKE '%t%t%t%t%t%'
 -- 4-) SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND  rental_rate = 2.99
+
+/*  ÖDEV 4  SORULAR
+
+1-) film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+2-) film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+3-) film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+4-) country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+5-) city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+*/
+
+/*  ÖDEV 4  CEVAPLAR
+1-) SELECT  DISTINCT  replacement_cost FROM film
+2-) SELECT  COUNT (DISTINCT  replacement_cost)  FROM film
+3-) SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G'
+4-) SELECT COUNT(*) FROM country WHERE country LIKE '_____'
+5-) SELECT * FROM city WHERE city LIKE '%R' OR city LIKE '%r'
+*/
