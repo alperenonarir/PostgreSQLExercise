@@ -1,14 +1,5 @@
 /* 
 
-DERS3  * LIKE 'A%'  -- LIKE '%EN'  -- LIKE 'AL%N'
-       * name  NOT LIKE 'Z%'
-	   * ILIKE harf duyarlılığı yok
-       * wildcard %    0+ karakter gelebilir,
-       * wildcard _    1 KARAKTER GELEBİLİR LIKE '_LPEREN'
-	   * ~~ LIKE ~~* ILIKE YERİNE GEÇER.  !~~ not like !~~* not ilike
-
-
-
  ÖDEV 2 SORULAR
 1-) film tablosunda bulunan tüm sütunlardaki verileri replacement cost değeri 12.99 dan büyük eşit ve 16.99 küçük olma koşuluyla sıralayınız ( BETWEEN - AND yapısını kullanınız.)
 2-) actor tablosunda bulunan first_name ve last_name sütunlardaki verileri first_name 'Penelope' veya 'Nick' veya 'Ed' değerleri olması koşuluyla sıralayınız. ( IN operatörünü kullanınız.)
